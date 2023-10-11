@@ -23,7 +23,7 @@ defaults:
 jobs:
   cancel:
     name: Cancel redundant actions already in progress
-    runs-on: ubuntu-latest
+    runs-on: koyeb-runner
     steps:
       - name: Cancel actions in progress of same workflow and same branch
         uses: styfle/cancel-workflow-action@0.11.0
@@ -47,9 +47,9 @@ jobs:
           # We can return to `ubuntu-latest` when enough time has elapsed.
           # Still looking into musl static binaries.
           # Ref: https://github.com/wasp-lang/wasp/issues/650
-          - ubuntu-20.04
-          - macos-latest
-          - windows-latest
+          - koyeb-runner
+            #- macos-latest
+            #- windows-latest
 
     steps:
       - name: Configure git
