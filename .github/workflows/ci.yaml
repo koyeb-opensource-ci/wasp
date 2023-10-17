@@ -23,7 +23,7 @@ defaults:
 jobs:
   cancel:
     name: Cancel redundant actions already in progress
-    runs-on: koyeb-runner
+    runs-on: koyeb-fra-medium
     steps:
       - name: Cancel actions in progress of same workflow and same branch
         uses: styfle/cancel-workflow-action@0.11.0
@@ -47,7 +47,7 @@ jobs:
           # We can return to `ubuntu-latest` when enough time has elapsed.
           # Still looking into musl static binaries.
           # Ref: https://github.com/wasp-lang/wasp/issues/650
-          - koyeb-runner
+          - koyeb-fra-medium
             #- macos-latest
             #- windows-latest
 
